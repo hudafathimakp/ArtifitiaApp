@@ -35,24 +35,28 @@ class SplashPage extends StatelessWidget {
           top: 4.h,
           right: 2.w,
           left: 2.w,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: [
-              CommonRichText(
-                text1: pageno,
-                text2: '/3',
-                color1: AppColor.black,
-              ),
-
-              TextButton(
-                onPressed: () {
-                  Get.toNamed(Routes.LOGIN);
-                },
-                child: NormalText(
-                  text: 'Skip',
-                  color: AppColor.black,
-                  fontSize: 18,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CommonRichText(
+                    text1: pageno,
+                    text2: '/3',
+                    color1: AppColor.black,
+                  ),
+              
+                  TextButton(
+                    onPressed: () {
+                      Get.toNamed(Routes.LOGIN);
+                    },
+                    child: NormalText(
+                      text: 'Skip',
+                      color: AppColor.black,
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
